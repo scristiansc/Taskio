@@ -53,6 +53,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "hamlit-rails"
   gem "web-console"
 end
 
@@ -61,3 +62,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "simple_form", "~> 5.4"
