@@ -57,6 +57,7 @@ group :development do
   gem "web-console"
   gem "annotate"
   gem "rails-i18n"
+  gem "devise"
 end
 
 group :test do
