@@ -7,10 +7,10 @@
           %li= msg
 
   .field
-    = f.label :name
-    = f.text_field :name
+    = f.label :name, t('.name')
+    = f.text_field :name, t('.name')
   .field
-    = f.label :description
-    = f.textarea :description
+    = f.label :description, t('.description')
+    = f.textarea :description, t('.description')
   .actions
-    = f.submit 'Save'
+    = f.submit t('.save')

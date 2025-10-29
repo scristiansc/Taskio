@@ -1,5 +1,5 @@
 ---
-en:
+es:
   activerecord:
     models:
       category:
@@ -7,9 +7,9 @@ en:
         others: Categorias
   categories:
     form:
-      description: Description
-      name: Name
-      save: Save
+      description: Descripción
+      name: Nombre
+      save: Crear
     new_category: Nueva categoria
   common:
     back: Atrás
@@ -17,9 +17,9 @@ en:
   hello: Hello world
   tasks:
     form:
-      category: Category
-      description: Description
-      due_date: Due date
-      name: Name
-      save: Save
+      category: Categoria
+      description: Descripción
+      due_date: Fecha limite
+      name: Nombre
+      save: Crear
     new_task: Nueva tarea

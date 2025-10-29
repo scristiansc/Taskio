@@ -7,16 +7,16 @@
           %li= msg
 
   .field
-    = f.label :name
+    = f.label :name, t('.name')
     = f.text_field :name
   .field
-    = f.label :description
+    = f.label :description, t('.description')
     = f.textarea :description
   .field
-    = f.label :due_date
+    = f.label :due_date, t('.due_date')
     = f.date_field :due_date
   .field
-    = f.label :category
+    = f.label :category, t('.category')
     = f.text_field :category
   .actions
-    = f.submit 'Save'
+    = f.submit t('.save')

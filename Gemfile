@@ -56,6 +56,7 @@ group :development do
   gem "hamlit-rails"
   gem "web-console"
   gem "annotate"
+  gem "rails-i18n"
 end
 
 group :test do
