@@ -64,3 +64,4 @@ group :test do
 end
 
 gem "simple_form", "~> 5.4"
+gem "annotate"
