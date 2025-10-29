@@ -17,6 +17,6 @@
     = f.date_field :due_date
   .field
     = f.label :category, t('.category')
-    = f.text_field :category
+    = f.collection_select :category_id, Category.all, :id, :name, prompt: t('.select_category')
   .actions
     = f.submit t('.save')

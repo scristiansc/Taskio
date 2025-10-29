@@ -15,6 +15,9 @@ es:
     back: Atrás
     new_task: Nueva tarea
   hello: Hello world
+  task:
+    errors:
+      invalid_due_date: La fecha no puede estar en el pasado
   tasks:
     form:
       category: Categoria

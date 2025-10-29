@@ -15,6 +15,9 @@ en:
     back: Atrás
     new_task: Nueva tarea
   hello: Hello world
+  task:
+    errors:
+      invalid_due_date: Invalid due date
   tasks:
     form:
       category: Category
