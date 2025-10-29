@@ -55,6 +55,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "hamlit-rails"
   gem "web-console"
+  gem "annotate"
 end
 
 group :test do
@@ -64,4 +65,3 @@ group :test do
 end
 
 gem "simple_form", "~> 5.4"
-gem "annotate"
