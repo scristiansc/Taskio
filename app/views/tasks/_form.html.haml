@@ -18,5 +18,9 @@
   .field
     = f.label :category, t('.category')
     = f.collection_select :category_id, Category.all, :id, :name, prompt: t('.select_category')
+    .participants
+      = f.simple_fields_for :participating_users do |g|
+        = render 'participating_user_fields', f: g
+
   .actions
     = f.submit t('.save')

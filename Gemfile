@@ -58,6 +58,7 @@ group :development do
   gem "annotate"
   gem "rails-i18n"
   gem "devise"
+  gem "cocoon"
 end
 
 group :test do
