@@ -4,7 +4,7 @@ class Task < ApplicationRecord
   has_many :participating_users, class_name: "Participant"
   has_many :participants, through: :participating_users, source: :user
 
-  validates :participating_user, presence: true
+  validates :participating_users, presence: true
 
   validates :name, :description, presence: true
   validates :name, uniqueness: { case_sensitive: false }

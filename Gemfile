@@ -59,6 +59,7 @@ group :development do
   gem "rails-i18n"
   gem "devise"
   gem "cocoon"
+  gem "cancancan"
 end
 
 group :test do
