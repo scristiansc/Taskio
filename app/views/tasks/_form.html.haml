@@ -1,4 +1,4 @@
-= form_for @task do |f|
+= simple_form_for @task do |f|
   - if @task.errors.any?
     #error_explanation
       %h2= "#{pluralize(@task.errors.count, "error")} prohibited this task from being saved:"
@@ -7,20 +7,25 @@
           %li= msg
 
   .field
-    = f.label :name, t('.name')
-    = f.text_field :name
+    = f.input :name, label: t('.name')
   .field
-    = f.label :description, t('.description')
-    = f.textarea :description
+    = f.input :description, as: :text, label: t('.description')
   .field
-    = f.label :due_date, t('.due_date')
-    = f.date_field :due_date
+    = f.input :due_date, as: :date, label: t('.due_date')
   .field
-    = f.label :category, t('.category')
-    = f.collection_select :category_id, Category.all, :id, :name, prompt: t('.select_category')
-    .participants
+    = f.input :category_id, collection: Category.all, prompt: t('.select_category'), label: t('.category')
+
+
+  .participants
+    .participants-container
       = f.simple_fields_for :participating_users do |g|
         = render 'participating_user_fields', f: g
 
+  #addParticipants
+    = link_to_add_association f, :participating_users, 'data-association-insertion-node' => '.participants .participants-container', 'data-turbolinks' => false do
+      agregar partici
+
+
   .actions
     = f.submit t('.save')
+
