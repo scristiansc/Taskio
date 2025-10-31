@@ -60,6 +60,7 @@ group :development do
   gem "devise"
   gem "cocoon"
   gem "cancancan"
+  gem "letter_opener"
 end
 
 group :test do
