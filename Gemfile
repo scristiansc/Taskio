@@ -10,6 +10,11 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
+
+# Agrega el gema de Bootstrap (usa la versión que desees, por ejemplo, ~> 5.3)
+gem "bootstrap", "~> 5.3"
+# Rails 8 a menudo usa dartsass-rails para compilar Sass
+gem "dartsass-rails" # Asegúrate de que esta gema o un compilador Sass similar esté presente
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -61,6 +66,8 @@ group :development do
   gem "cocoon"
   gem "cancancan"
   gem "letter_opener"
+  gem "font-awesome-rails"
+  gem "cssbundling-rails"
 end
 
 group :test do

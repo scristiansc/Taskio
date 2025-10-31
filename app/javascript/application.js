@@ -4,6 +4,8 @@ import "controllers"
 import "jquery"
 import "popper"
 import "cocoon"
+import "bootstrap"
 
 // Hacer jQuery global
 window.$ = window.jQuery = globalThis.jQuery
+import * as bootstrap from "bootstrap"
