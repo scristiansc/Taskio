@@ -1,18 +1,78 @@
+// Importaciones necesarias
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-nav.navbar
-	&.bg-dark-blue
-		background-color: #273b47
-	.navbar-nav
-		.nav-item.active
-			font-weight: bold
-	.dropdown-user
-		img
-			border-radius: 50%
-			background-color: white
-			margin-left: 15px
-.btn-interaction
-	font-size: small
-.card
-	border-radius: 10px
+// Navbar principal
+nav.navbar {
+  &.bg-white {
+    background-color: #ffffff !important;
+  }
+
+  .navbar-nav {
+    .nav-item.active {
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #273b47 !important; // texto gris oscuro
+      &:hover {
+        color: #0d6efd !important; // azul bootstrap al pasar el mouse
+      }
+    }
+  }
+
+  // Dropdown de usuario
+  .dropdown-user {
+    img {
+      border-radius: 50%;
+      background-color: white;
+      margin-left: 15px;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #ccc;
+    }
+
+    .dropdown-menu {
+      background-color: #ffffff !important; // fondo blanco
+      .dropdown-item {
+        color: #273b47 !important; // texto visible
+        &:hover {
+          background-color: #f8f9fa !important;
+          color: #0d6efd !important; // hover azul
+        }
+      }
+    }
+  }
+}
+
+// Botón de interacción
+.btn-interaction {
+  font-size: small;
+}
+
+// Cards
+.card {
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+}
+

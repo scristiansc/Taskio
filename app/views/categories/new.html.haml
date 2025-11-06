@@ -1,5 +1,9 @@
-%h1= t("categories.new_category")
+%h1.text-center.mb-4= t("categories.new_category")
 
-= render 'form'
-
-= link_to t('common.back'), categories_path
+.card.mx-auto.mb-4{:style => "max-width: 600px;"}
+  .card-header.bg-dark.text-white
+    %h5.mb-0= t("categories.new_category")
+  .card-body
+    = render 'form'
+    .mt-3.text-end
+      = link_to t('common.back'), categories_path, class: 'btn btn-secondary'

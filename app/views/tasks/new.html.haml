@@ -1,5 +1,8 @@
-%h1= t('tasks.new_task')
+.card.mx-auto.mb-4{:style => "max-width: 600px;"}
+  .card-header.bg-dark.text-white
+    %h5.mb-0= t('tasks.new_task')
+  .card-body
+    = render 'form'
 
-= render 'form'
-
-= link_to t('common.back'), tasks_path
+%br
+= link_to t('common.back'), tasks_path, class: 'btn btn-secondary'

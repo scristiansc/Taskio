@@ -1,4 +1,11 @@
-.nested-fields
-  = f.input :user_id, as: :select, collection: User.where.not(id: current_user.id), label: "Usuario"
-  = f.input :role, label: "Rol"
-  = link_to_remove_association "Eliminar", f
+.nested-fields.mb-2
+  = f.input :user_id,
+            as: :select,
+            collection: User.where.not(id: current_user.id).map { |u| [u.email, u.id] },
+            label: "Usuario",
+            prompt: "Selecciona un usuario",
+            input_html: { class: "form-select" }
+
+  = f.input :role, label: "Rol", input_html: { class: "form-control mt-1" }
+
+  = link_to_remove_association "Eliminar", f, class: "btn btn-sm btn-outline-danger mt-1"

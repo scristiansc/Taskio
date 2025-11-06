@@ -1,25 +1,35 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @task.name
-%p
-  %b Description:
-  = @task.description
-%p
-  %b Due date:
-  = @task.due_date
-%p
-  %b Category:
-  = @task.category
+.row
+  .col-md-8.offset-md-2
+    .card.mb-3
+      .card-header.bg-primary.text-white
+        %h4= @task.name
+      .card-body
+        %p
+          %strong Description:
+          = @task.description
+        %p
+          %strong Due date:
+          = @task.due_date
+        %p
+          %strong Category:
+          = @task.category.name
 
-.notes-container
-  .notes
-    - @task.notes.each do |note|
-      = render "tasks/notes/note", note: note
-  = simple_form_for Note.new, url: task_notes_path(task_id: @task.id), remote: true  do |f|
-    = f.input :body, label: false, as: :string, placeholder: "Digite su nota", input_html: {autocomplete: :off}
+    .card.mb-3
+      .card-header.bg-secondary.text-white
+        %h5 Notes
+      .card-body.notes-container
+        - if @task.notes.any?
+          - @task.notes.each do |note|
+            = render "tasks/notes/note", note: note
+        - else
+          %p.text-muted No notes yet.
+        = simple_form_for Note.new, url: task_notes_path(task_id: @task.id), remote: true do |f|
+          .input-group.mt-2
+            = f.input :body, label: false, as: :string, placeholder: "Digite su nota", input_html: { autocomplete: :off, class: "form-control" }
+            = f.button :submit, "Agregar", class: "btn btn-primary"
 
-= link_to 'Edit', edit_task_path(@task)
-\|
-= link_to 'Back', tasks_path
+    .mt-3
+      = link_to 'Edit', edit_task_path(@task), class: "btn btn-warning me-2"
+      = link_to 'Back', tasks_path, class: "btn btn-secondary"

@@ -68,6 +68,7 @@ group :development do
   gem "letter_opener"
   gem "font-awesome-rails"
   gem "cssbundling-rails"
+  gem "font-awesome-sass", "~> 5.12.0"
 end
 
 group :test do

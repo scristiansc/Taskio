@@ -1,23 +1,17 @@
-%h1 Listing categories
+%h1 Listing Categories
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th
-      %th
-      %th
-
-  %tbody
-    - @categories.each do |category|
-      %tr
-        %td= category.name
-        %td= category.description
-        %td= link_to 'Show', category
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= button_to 'Destroy', category, method: :delete, data:  { confirm: 'Are you sure?' }
+%div.list-group
+  - @categories.each do |category|
+    .list-group-item.mb-2
+      .card
+        .card-header.bg-dark.text-white
+          %h5.card-title= category.name
+        .card-body.d-flex.justify-content-between.align-items-center
+          %p.card-text.mb-0= category.description
+          .d-flex.gap-2
+            = link_to 'Show', category, class: 'btn btn-sm btn-primary'
+            = link_to 'Edit', edit_category_path(category), class: 'btn btn-sm btn-warning'
+            = button_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
 
 %br
-
-= link_to 'New Category', new_category_path
+= link_to 'New Category', new_category_path, class: 'btn btn-success'
