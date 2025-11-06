@@ -133,8 +133,8 @@ GEM
     ffi (1.17.2-x86_64-linux-gnu)
     font-awesome-rails (4.7.0.9)
       railties (>= 3.2, < 9.0)
-    font-awesome-sass (5.12.0)
-      sassc (>= 1.11)
+    font-awesome-sass (6.7.2)
+      sassc (~> 2.0)
     fugit (1.12.1)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
@@ -426,7 +426,7 @@ DEPENDENCIES
   debug
   devise
   font-awesome-rails
-  font-awesome-sass (~> 5.12.0)
+  font-awesome-sass (~> 6.7.2)
   hamlit-rails
   importmap-rails
   jbuilder
